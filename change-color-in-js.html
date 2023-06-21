@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Text Color</title>
+
+    <style>
+        #pass {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <p id="change-clr"> Hi, This is my First Try</p>
+    </div>
+
+    <button onclick="chg_clr()" id="myBtn">Click Me to Change</button>
+    <div>
+        <p id="pass"> My First try is success... </p>
+    </div>
+
+    <script>
+        function chg_clr() {
+
+            // this is for change c
+            var clr = document.getElementById('change-clr');
+
+            clr.style.color = 'red';
+            clr.style.background = 'orange';
+            // clr.style.display = 'inline'
+
+
+            var success = document.getElementById('pass');
+            success.style.color = 'green';
+            success.style.background = 'yellow';
+            success.style.display = 'block';
+
+
+
+        }
+    </script>
+
+</body>
+
+
+
+</html>

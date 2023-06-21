@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Submenu</title>
+
+    <style>
+        .main-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .custom-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 1000px;
+        }
+
+        .sub-menu {
+            display: none;
+        }
+
+        .menu-button {
+            background: green;
+            color: white;
+            margin: 20px;
+            padding: 20px;
+            font-size: 20px;
+        }
+
+        .active {
+            background: orange;
+            color: white;
+            margin: 20px;
+            padding: 20px;
+            font-size: 20px;
+        }
+
+        .sub-menu.active {
+            display: block;
+            left: 20px;
+            width: 90%;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="main-container">
+        <div class="custom-container" onclick="togglemenu()">
+            <div class="main-menu">
+                <button class="menu-button" onclick="openSubMenu(1)" id="mySubmenuBtn">Main Menu 1</button>
+                <div class="sub-menu" id="1">
+                    <div>
+                        <p class="menu-item">Item 1</p>
+                        <p class="menu-item"> Item 2 </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-menu">
+                <button class="menu-button" onclick="openSubMenu(2)" id="mySubmenuBtn">Main Menu 2</button>
+                <div class="sub-menu" id="2">
+                    <div>
+                        <p class="menu-item">Item 3</p>
+                        <p class="menu-item"> Item 4 </p>
+                    </div>
+                </div>
+            </div>
+            <div class="main-menu">
+                <button class="menu-button" onclick="openSubMenu(3)" id="mySubmenuBtn">Main Menu 3</button>
+                <div class="sub-menu" id="3">
+                    <div>
+                        <p class="menu-item">Item 5</p>
+                        <p class="menu-item"> Item 6 </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        function openSubMenu(submenuId) {
+
+            const submenu = document.getElementById(1);
+            const submenu1 = document.getElementById(2);
+            const submenu2 = document.getElementById(3);
+
+            if (submenuId == 1) {
+                submenu.style.display = 'block';
+                submenu1.style.display = 'none';
+                submenu2.style.display = 'none';
+            } else if (submenuId == 2) {
+                submenu1.style.display = 'block';
+                submenu.style.display = 'none';
+                submenu2.style.display = 'none';
+            } else if (submenuId == 3) {
+                submenu2.style.display = 'block';
+                submenu1.style.display = 'none';
+                submenu.style.display = 'none';
+            } else {
+                submenu2.style.display = 'none';
+                submenu1.style.display = 'none';
+                submenu.style.display = 'none';
+            }
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>
